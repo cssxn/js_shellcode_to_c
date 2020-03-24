@@ -1,0 +1,72 @@
+//------------------------------------------------
+//--- 010 Editor v9.0.2 Script File
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+//   History: 
+//------------------------------------------------
+//------------------------------------------------
+//--- 010 Editor Script File
+
+
+#define TITLE "js-shellcode-to-c"
+
+
+void Main(void)
+{
+    int iIter;
+    int iStart;
+    int iSize;
+    string sToClipboard;
+    string sTemp;
+
+    if (FileCount() == 0)
+    {
+        MessageBox(idOk, TITLE, "At least one file needs to be open.");
+        return;
+    }
+
+    // Initializes the variables
+    iSize = GetSelSize();
+    iStart = GetSelStart();
+
+    // Check that bytes were selected, otherwise process complete file
+    if (iSize == 0)
+    {
+      iSize = FileSize();
+      iStart = 0;
+    }
+
+    if (iSize > 10000 && MessageBox(idYes | idNo, TITLE, "It could take a long time to process %d bytes, do you want to continue?", iSize) == idNo)
+      return;
+
+     int i;
+     sTemp = "unsigned char sc[] = \"";
+     for(i = 0;i < iSize; i+=6)
+     {
+       if(i % 8 == 0)
+       {
+        sTemp += "\n";
+       }
+       sTemp += "\\x";
+       sTemp += ReadString(iStart+i+4,2);
+       sTemp += "\\x";
+       sTemp += ReadString(iStart+i+2,2);
+        
+        
+       //Printf("%s\n",ReadString(iStart+i+2,4));        
+     }
+     sTemp+= "\";\n";
+     Printf(sTemp);
+     ClearClipboard();
+     CopyStringToClipboard(sTemp);
+     FileNew("Hex");
+    
+     Printf("Successfully created a new tab with [ 0x%x ] bytes.\n", i);
+    
+}
+
+Main();
