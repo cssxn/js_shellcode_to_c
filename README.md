@@ -1,6 +1,6 @@
 # js_shellcode_to_c
 
-This script is used for convert a javascript shellcode that with a prefix of \u or %u into c style.
+This script is used for converting a javascript shellcode that with a prefix of \u or %u into c style.
 
 After run the script , we should see the result as below in a new file tab in 010Editor.
 
