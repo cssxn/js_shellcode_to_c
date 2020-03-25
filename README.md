@@ -11,7 +11,7 @@ And press the hotkey `Ctrl+Shift+V` to paste the c style into shellcode bin file
 
 Finally! use `scdbg` to analysis the logs of each api call invoked from the shellcode.
 
-![image](https://github.com/cssxn/js_shellcode_to_c/raw/master/IMG/2.png)
+![image](https://github.com/cssxn/js_shellcode_to_c/raw/master/IMG/2.jpg)
 
 
 
