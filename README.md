@@ -33,6 +33,10 @@ unsigned char sc[] = "
 \x00\x8b\x00\x8b\x40\x10\xc3\x00";
 ```
 
+![image](https://github.com/cssxn/js_shellcode_to_c/blob/master/IMG/1.png)
+
+
+![image](https://github.com/cssxn/js_shellcode_to_c/blob/master/IMG/2.png)
 
 
 
