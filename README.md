@@ -36,7 +36,9 @@ unsigned char sc[] = "
 ![image](https://github.com/cssxn/js_shellcode_to_c/blob/master/IMG/1.png)
 
 
-![image](https://github.com/cssxn/js_shellcode_to_c/blob/master/IMG/2.png)
+![image](https://github.com/cssxn/js_shellcode_to_c/blob/master/IMG/1.png)
+
+
 
 
 
